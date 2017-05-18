@@ -1,0 +1,12 @@
+Besprechung Schachinger, 18.05.2017
+
+• Kein gleichzeitiges Bearbeiten eines Tasks durch mehrere Mitarbeiter
+• Chat- Verlauf soll als pdf exportiert werden können [wenn möglich]
+• Deadline für die Mitarbeiter (2h nach Reklamationseingang)
+• Kunden- Sicht: sobald ein Task abgeschlossen ist, soll er in der Liste nach unten wandern und abgehakt werden
+• Admin- Sicht erstellen:
+	Soll bereits eingeteilten Task einem anderen Mitarbeiter zuteilen können
+	Excel- Report erstellen [wenn möglich], beinhaltet sämtliche Daten vom Start der Reklamation bis zum Abschluss
+
+
+Nächster Termin: 08.06 um 09:30
