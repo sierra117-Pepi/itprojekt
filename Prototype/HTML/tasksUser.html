@@ -23,8 +23,14 @@
     <!-- Morris Charts CSS -->
     <link href="../CSS/morris.css" rel="stylesheet">
 
+	    <link href="../CSS/itproject.css" rel="stylesheet">
+
+	
     <!-- Custom Fonts -->
     <link href="../CSS/Login/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+	 <script src="../JavaScript/CustomFiles/tasksUser.js" type="text/javascript"></script>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -265,6 +271,9 @@
             </div>
             <!-- /.row -->
             <div class="row">
+               <form role="form">
+			      <fieldset>
+
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-body">
@@ -282,7 +291,7 @@
                                             <td>Kabelschacht</td>
                                             <td>20.05.2016</td>
                                             
-                                            <td><button type="button" class="btn btn-success btn-circle">
+                                            <td><button id="editButton" class="btn btn-success btn-circle">
 													<i class="fa fa-edit"></i>
 												</button></td>
 
@@ -290,7 +299,7 @@
                                         <tr>
                                             <td>Leisten</td>
                                             <td>22.05.2016</td>
-                                            <td><button type="button" class="btn btn-success btn-circle">
+                                            <td><button id="editButton"  class="btn btn-success btn-circle">
 													<i class="fa fa-edit"></i>
 												</button></td>
                                         </tr>
@@ -298,7 +307,7 @@
                                             <td>Schalter</td>
                                             <td>23.05.2016</td>
                                             
-                                            <td><button type="button" class="btn btn-success btn-circle">
+                                            <td><button id="editButton"  class="btn btn-success btn-circle">
 													<i class="fa fa-edit"></i>
 												</button></td>
                                         </tr>
@@ -306,7 +315,7 @@
                                             <td>Sprechanlage</td>
                                             <td>30.05.2016</td>
                                             
-                                            <td><button type="button" class="btn btn-success btn-circle">
+                                            <td><button id="editButton" class="btn btn-success btn-circle">
 													<i class="fa fa-edit"></i>
 												</button></td>
 
@@ -321,6 +330,8 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-6 -->
+				</fieldset>
+				</form>
             </div>
             <!-- /.row -->
             
