@@ -23,13 +23,13 @@
     <!-- Morris Charts CSS -->
     <link href="../CSS/morris.css" rel="stylesheet">
 
-	    <link href="../CSS/itproject.css" rel="stylesheet">
+    <link href="../CSS/itproject.css" rel="stylesheet">
 
-	
+
     <!-- Custom Fonts -->
     <link href="../CSS/Login/font-awesome.min.css" rel="stylesheet" type="text/css">
-	
-	 <script src="../JavaScript/CustomFiles/tasksUser.js" type="text/javascript"></script>
+
+    <script src="../JavaScript/CustomFiles/tasksUser.js" type="text/javascript"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -58,9 +58,9 @@
             </div>
             <!-- /.navbar-header -->
 
-			
-			
-			
+
+
+
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
@@ -112,10 +112,10 @@
                     </a>
                     <ul class="dropdown-menu dropdown-tasks">
                         <li>
-                            <a href="#">
+                            <a href="editTask.html">
                                 <div>
                                     <p>
-                                        <strong>Auftrag 1</strong> <span class="pull-right text-muted">40% Abgeschlossen
+                                        <strong>Kabelschacht</strong> <span class="pull-right text-muted">40% Abgeschlossen
 											</span>
                                     </p>
                                     <div class="progress progress-striped active">
@@ -131,7 +131,7 @@
                             <a href="#">
                                 <div>
                                     <p>
-                                        <strong>Auftrag 2</strong> <span class="pull-right text-muted">20%
+                                        <strong>Leisten</strong> <span class="pull-right text-muted">20%
 											Abgeschlossen</span>
                                     </p>
                                     <div class="progress progress-striped active">
@@ -147,7 +147,7 @@
                             <a href="#">
                                 <div>
                                     <p>
-                                        <strong>Auftrag 3</strong> <span class="pull-right text-muted">60%
+                                        <strong>Schalter</strong> <span class="pull-right text-muted">60%
 											Abgeschlossen</span>
                                     </p>
                                     <div class="progress progress-striped active">
@@ -163,7 +163,7 @@
                             <a href="#">
                                 <div>
                                     <p>
-                                        <strong>Auftrag 4</strong> <span class="pull-right text-muted">80%
+                                        <strong>Sprechanlage</strong> <span class="pull-right text-muted">80%
 											Abgeschlossen</span>
                                     </p>
                                     <div class="progress progress-striped active">
@@ -176,7 +176,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a class="text-center" href="#"> <strong>Alle Aufträge ansehen</strong> <i class="fa fa-angle-right"></i>
+                            <a class="text-center" href="tasksUser.html"> <strong>Alle Aufträge ansehen</strong> <i class="fa fa-angle-right"></i>
                             </a>
                         </li>
                     </ul>
@@ -236,7 +236,6 @@
                 <!-- /.dropdown -->
             </ul>
             <!-- /.navbar-top-links -->
-
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
@@ -253,7 +252,7 @@
                         </li>
                         <li><a href="indexUser.html"><i class="fa fa-dashboard fa-fw"></i>
 								Dashboard</a></li>
-						<li><a href="tasksUser.html"><i class="fa fa-tasks fa-fw"></i>
+                        <li><a href="tasksUser.html"><i class="fa fa-tasks fa-fw"></i>
 								Meine Aufträge</a></li>
                     </ul>
                 </div>
@@ -271,89 +270,114 @@
             </div>
             <!-- /.row -->
             <div class="row">
-               <form role="form">
-			      <fieldset>
+                <form role="form">
+                    <fieldset>
 
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>Aufrag</th>
-                                            <th>Datum</th>
-                                            <th>Bearbeiten</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Kabelschacht</td>
-                                            <td>20.05.2016</td>
-                                            
-                                            <td><button id="editButton" class="btn btn-success btn-circle">
-													<i class="fa fa-edit"></i>
-												</button></td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>Leisten</td>
-                                            <td>22.05.2016</td>
-                                            <td><button id="editButton"  class="btn btn-success btn-circle">
-													<i class="fa fa-edit"></i>
-												</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Schalter</td>
-                                            <td>23.05.2016</td>
-                                            
-                                            <td><button id="editButton"  class="btn btn-success btn-circle">
-													<i class="fa fa-edit"></i>
-												</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sprechanlage</td>
-                                            <td>30.05.2016</td>
-                                            
-                                            <td><button id="editButton" class="btn btn-success btn-circle">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Aufrag</th>
+                                                    <th>Datum</th>
+                                                    <th>Auftragstatus</th>
+                                                    <th>Bearbeiten</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Kabelschacht</td>
+                                                    <td>20.05.2016</td>
+                                                    <td>
+                                                        <div class="progress progress-striped active">
+                                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                                <span class="sr-only">40% Abgeschlossen (success)</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td><button id="editButton" class="btn btn-success btn-circle">
 													<i class="fa fa-edit"></i>
 												</button></td>
 
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                                </tr>
+                                                <tr>
+                                                    <td>Leisten</td>
+                                                    <td>22.05.2016</td>
+                                                    <td>
+                                                        <div class="progress progress-striped active">
+                                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                                <span class="sr-only">20% Abgeschlossen (success)</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td><button id="editButton" class="btn btn-success btn-circle">
+													<i class="fa fa-edit"></i>
+												</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Schalter</td>
+                                                    <td>23.05.2016</td>
+                                                    <td>
+                                                        <div class="progress progress-striped active">
+                                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                                                <span class="sr-only">60% Abgeschlossen (success)</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td><button id="editButton" class="btn btn-success btn-circle">
+													<i class="fa fa-edit"></i>
+												</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sprechanlage</td>
+                                                    <td>30.05.2016</td>
+                                                    <td>
+                                                        <div class="progress progress-striped active">
+                                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                                                <span class="sr-only">80% Abgeschlossen (success)</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td><button id="editButton" class="btn btn-success btn-circle">
+													<i class="fa fa-edit"></i>
+												</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.table-responsive -->
+                                </div>
+                                <!-- /.panel-body -->
                             </div>
-                            <!-- /.table-responsive -->
+                            <!-- /.panel -->
                         </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-6 -->
-				</fieldset>
-				</form>
+                        <!-- /.col-lg-6 -->
+                    </fieldset>
+                </form>
             </div>
             <!-- /.row -->
-            
-    </div>
-    <!-- /#page-wrapper -->
-    <!-- /#wrapper -->
-    <!-- jQuery -->
-    <script src="../JavaScript/IndexFiles/jquery.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../JavaScript/IndexFiles/bootstrap.min.js"></script>
+        </div>
+        <!-- /#page-wrapper -->
+        <!-- /#wrapper -->
+        <!-- jQuery -->
+        <script src="../JavaScript/IndexFiles/jquery.min.js"></script>
 
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../JavaScript/IndexFiles/metisMenu.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../JavaScript/IndexFiles/bootstrap.min.js"></script>
 
-    <!-- Morris Charts JavaScript -->
-    <script src="../JavaScript/IndexFiles/raphael.min.js"></script>
-    <script src="../JavaScript/IndexFiles/morris.min.js"></script>
-    <script src="../JavaScript/IndexFiles/morris-data.js"></script>
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="../JavaScript/IndexFiles/metisMenu.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="../JavaScript/IndexFiles/sb-admin-2.js"></script>
+        <!-- Morris Charts JavaScript -->
+        <script src="../JavaScript/IndexFiles/raphael.min.js"></script>
+        <script src="../JavaScript/IndexFiles/morris.min.js"></script>
+        <script src="../JavaScript/IndexFiles/morris-data.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="../JavaScript/IndexFiles/sb-admin-2.js"></script>
 </body>
 
 </html>
