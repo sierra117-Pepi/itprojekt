@@ -3,33 +3,45 @@
 
 <head>
 
+
+
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+    </style>
+    <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="../JavaScript/CustomFiles/tasksWorker.js" type="text/javascript"></script>
+
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>User-Sicht</title>
+    <title>Arbeiter-Sicht</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../../CSS/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="../CSS/Login/metisMenu.min.css" rel="stylesheet">
+    <link href="../../CSS/Login/metisMenu.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../CSS/Login/sb-admin-2.css" rel="stylesheet">
+    <link href="../../CSS/Login/sb-admin-2.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="../CSS/morris.css" rel="stylesheet">
+    <link href="../../CSS/morris.css" rel="stylesheet">
 
-    <link href="../CSS/itproject.css" rel="stylesheet">
+    <link href="../../CSS/itproject.css" rel="stylesheet">
 
 
     <!-- Custom Fonts -->
-    <link href="../CSS/Login/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../CSS/Login/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <script src="../JavaScript/CustomFiles/tasksUser.js" type="text/javascript"></script>
+
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -53,7 +65,7 @@
 						class="icon-bar"
 					></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 				</button>
-                <a class="navbar-brand" href="indexUser.html">Reklamationsmanagement
+                <a class="navbar-brand" href="indexWorker.html">Reklamationsmanagement
 					Tool</a>
             </div>
             <!-- /.navbar-header -->
@@ -115,7 +127,7 @@
                             <a href="editTask.html">
                                 <div>
                                     <p>
-                                        <strong>Kabelschacht</strong> <span class="pull-right text-muted">40% Abgeschlossen
+                                        <strong>Kunde1: Lieferreklamation</strong> <span class="pull-right text-muted">40% Abgeschlossen
 											</span>
                                     </p>
                                     <div class="progress progress-striped active">
@@ -131,7 +143,7 @@
                             <a href="#">
                                 <div>
                                     <p>
-                                        <strong>Leisten</strong> <span class="pull-right text-muted">20%
+                                        <strong>Kunde2: Retoure</strong> <span class="pull-right text-muted">20%
 											Abgeschlossen</span>
                                     </p>
                                     <div class="progress progress-striped active">
@@ -147,7 +159,7 @@
                             <a href="#">
                                 <div>
                                     <p>
-                                        <strong>Schalter</strong> <span class="pull-right text-muted">60%
+                                        <strong>Kunde3: Transportschaden</strong> <span class="pull-right text-muted">60%
 											Abgeschlossen</span>
                                     </p>
                                     <div class="progress progress-striped active">
@@ -163,7 +175,7 @@
                             <a href="#">
                                 <div>
                                     <p>
-                                        <strong>Sprechanlage</strong> <span class="pull-right text-muted">80%
+                                        <strong>Kunde4: Garantievorabtausch</strong> <span class="pull-right text-muted">80%
 											Abgeschlossen</span>
                                     </p>
                                     <div class="progress progress-striped active">
@@ -176,7 +188,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a class="text-center" href="tasksUser.html"> <strong>Alle Aufträge ansehen</strong> <i class="fa fa-angle-right"></i>
+                            <a class="text-center" href="indexWorker.html"> <strong>Alle Aufträge ansehen</strong> <i class="fa fa-angle-right"></i>
                             </a>
                         </li>
                     </ul>
@@ -250,9 +262,9 @@
                             </div>
                             <!-- /input-group -->
                         </li>
-                        <li><a href="indexUser.html"><i class="fa fa-dashboard fa-fw"></i>
-								Dashboard</a></li>
-                        <li><a href="tasksUser.html"><i class="fa fa-tasks fa-fw"></i>
+                        <li><a href="indexWorker.html"><i class="fa fa-dashboard fa-fw"></i>
+								Aufträge</a></li>
+                        <li><a href="tasksWorker.html"><i class="fa fa-tasks fa-fw"></i>
 								Meine Aufträge</a></li>
                     </ul>
                 </div>
@@ -277,71 +289,55 @@
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <div class="table-responsive">
-                                        <table class="table table-hover">
+                                        <table class="table table-striped" id="tasksTable">
                                             <thead>
                                                 <tr>
                                                     <th>Aufrag</th>
                                                     <th>Datum</th>
-                                                    <th>Auftragstatus</th>
-                                                    <th>Bearbeiten</th>
+                                                    <th>Beschreibung</th>
+                                                    <th>Nachrichten</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>Kabelschacht</td>
+                                                    <td>Auftrag1</td>
                                                     <td>20.05.2016</td>
                                                     <td>
-                                                        <div class="progress progress-striped active">
-                                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                                                <span class="sr-only">40% Abgeschlossen (success)</span>
-                                                            </div>
-                                                        </div>
+                                                        Retoure
                                                     </td>
-                                                    <td><button id="editButton" class="btn btn-success btn-circle">
-													<i class="fa fa-edit"></i>
+                                                    <td><button type="button" id="chatButton" class="btn btn-success btn-circle">
+													<i class="fa fa-comments" ></i>
 												</button></td>
 
                                                 </tr>
                                                 <tr>
-                                                    <td>Leisten</td>
+                                                    <td>Auftrag2</td>
                                                     <td>22.05.2016</td>
                                                     <td>
-                                                        <div class="progress progress-striped active">
-                                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                                                <span class="sr-only">20% Abgeschlossen (success)</span>
-                                                            </div>
-                                                        </div>
+                                                        Lieferreklamation
                                                     </td>
-                                                    <td><button id="editButton" class="btn btn-success btn-circle">
-													<i class="fa fa-edit"></i>
+                                                    <td><button type="button" id="chatButton1" class="btn btn-success btn-circle">
+													<i class="fa fa-comments"></i>
 												</button></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Schalter</td>
+                                                    <td>Auftrag3</td>
                                                     <td>23.05.2016</td>
                                                     <td>
-                                                        <div class="progress progress-striped active">
-                                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                                                <span class="sr-only">60% Abgeschlossen (success)</span>
-                                                            </div>
-                                                        </div>
+                                                        Transportschaden
                                                     </td>
-                                                    <td><button id="editButton" class="btn btn-success btn-circle">
-													<i class="fa fa-edit"></i>
+                                                    <td><button type="button" id="chatButton2" class="btn btn-success btn-circle">
+													<i class="fa fa-comments"></i>
 												</button></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Sprechanlage</td>
+                                                    <td>Auftrag4</td>
                                                     <td>30.05.2016</td>
                                                     <td>
-                                                        <div class="progress progress-striped active">
-                                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                                                <span class="sr-only">80% Abgeschlossen (success)</span>
-                                                            </div>
-                                                        </div>
+                                                        Retoure
                                                     </td>
-                                                    <td><button id="editButton" class="btn btn-success btn-circle">
-													<i class="fa fa-edit"></i>
+                                                    <td><button type="button" id="chatButton3" class="btn btn-success btn-circle">
+													<i class="fa fa-comments"></i>
 												</button></td>
                                                 </tr>
                                             </tbody>
@@ -362,22 +358,33 @@
         </div>
         <!-- /#page-wrapper -->
         <!-- /#wrapper -->
+
         <!-- jQuery -->
+        <!--
         <script src="../JavaScript/IndexFiles/jquery.min.js"></script>
+        -->
 
         <!-- Bootstrap Core JavaScript -->
+        <!--
         <script src="../JavaScript/IndexFiles/bootstrap.min.js"></script>
+        -->
 
         <!-- Metis Menu Plugin JavaScript -->
+        <!--
         <script src="../JavaScript/IndexFiles/metisMenu.min.js"></script>
+        -->
 
         <!-- Morris Charts JavaScript -->
+        <!--
         <script src="../JavaScript/IndexFiles/raphael.min.js"></script>
         <script src="../JavaScript/IndexFiles/morris.min.js"></script>
         <script src="../JavaScript/IndexFiles/morris-data.js"></script>
+        -->
 
         <!-- Custom Theme JavaScript -->
+        <!--
         <script src="../JavaScript/IndexFiles/sb-admin-2.js"></script>
+        -->
 </body>
 
 </html>

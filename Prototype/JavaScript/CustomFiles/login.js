@@ -29,9 +29,9 @@ function addActionListeners() {
 }
 
 function openWindowUser() {
-    window.open("../HTML/indexUser.html");
+    window.location.href = "../HTML/UserSites/indexUser.html";
 }
 
 function openWindowWorker() {
-    window.open("../HTML/indexWorker.html");
+    window.location.href = "../HTML/WorkerSites/indexWorker.html";
 }
