@@ -48,13 +48,13 @@ function addMessage(chat, message) {
     small.setAttribute("class", "pull-right text-muted");
     var i = document.createElement("i");
     i.setAttribute("class", "fa fa-clock-o fa-fw");
-    small.appendChild(document.createTextNode("Vor 1 Sekunde"));
     var p = document.createElement("p");
     p.appendChild(document.createTextNode(message));
     //End create the entry for the caht list
 
     //Appen child elements
     small.appendChild(i);
+    small.appendChild(document.createTextNode(" Vor 1 Sekunde"));
     divHeader.appendChild(strong);
     divHeader.appendChild(small);
     divBody.appendChild(divHeader);
