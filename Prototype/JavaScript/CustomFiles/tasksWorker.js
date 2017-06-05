@@ -7,5 +7,5 @@ $(document).ready(function() {
 });
 
 function getChat() {
-    window.open("../HTML/chatWorker.html");
+    window.location.href = '../HTML/chatWorker.html';
 }
