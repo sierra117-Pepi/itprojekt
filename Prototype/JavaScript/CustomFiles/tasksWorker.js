@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     $('#tasksTable').dataTable();
     var chatButton = document.getElementById("chatButton").addEventListener("click", getChat);
     var chatButton = document.getElementById("chatButton1").addEventListener("click", getChat);
@@ -7,5 +7,5 @@ $(document).ready(function () {
 });
 
 function getChat() {
-    window.location.href = '../HTML/WorkerSites/chatWorker.html';
+    window.location.href = '../../HTML/WorkerSites/chatWorker.html';
 }
