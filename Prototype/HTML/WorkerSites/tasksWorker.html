@@ -237,6 +237,115 @@
             <!-- /.navbar-static-side -->
         </nav>
 
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Chatverlauf</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="chat-panel panel panel-default">
+                            <div class="panel-heading">
+                                <i class="fa fa-comments fa-fw"></i> Chat
+                                <div class="btn-group pull-right">
+                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+								<i class="fa fa-chevron-down"></i>
+							</button>
+                                    <ul class="dropdown-menu slidedown">
+                                        <li>
+                                            <a href="#" id="refresh"> <i class="fa fa-refresh fa-fw"></i> Refresh
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <ul class="chat" id="chat-div">
+                                    <li class="left clearfix"><span class="chat-img pull-left">
+									<img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar"
+									class="img-circle"
+								/>
+							</span>
+                                        <div class="chat-body clearfix">
+                                            <div class="header">
+                                                <strong class="primary-font">TestWorker</strong> <small class="pull-right text-muted"> <i class="fa fa-clock-o fa-fw"></i> Vor 15 Minuten 
+										</small>
+                                            </div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="right clearfix"><span class="chat-img pull-right">
+									<img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar"
+									class="img-circle"
+								/>
+							</span>
+                                        <div class="chat-body clearfix">
+                                            <div class="header">
+                                                <small class=" text-muted"> <i
+											class="fa fa-clock-o fa-fw"
+										></i> Vor 14 Minuten
+										</small> <strong class="pull-right primary-font">TestUser</strong>
+                                            </div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="left clearfix"><span class="chat-img pull-left">
+									<img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar"
+									class="img-circle"
+								/>
+							</span>
+                                        <div class="chat-body clearfix">
+                                            <div class="header">
+                                                <strong class="primary-font">TestWorker</strong> <small class="pull-right text-muted"> <i class="fa fa-clock-o fa-fw"></i> Vor 13 Minuten
+										</small>
+                                            </div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="right clearfix"><span class="chat-img pull-right">
+									<img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar"
+									class="img-circle"
+								/>
+							</span>
+                                        <div class="chat-body clearfix">
+                                            <div class="header">
+                                                <small class=" text-muted"> <i
+											class="fa fa-clock-o fa-fw"
+										></i> Vor 12 Minuten
+										</small> <strong class="pull-right primary-font">TestUser</strong>
+                                            </div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.panel-body -->
+                            <div class="panel-footer">
+                                <div class="input-group">
+                                    <input id="btn-input" type="text" class="form-control input-sm" placeholder="Nachricht hier eingeben..." /> <span class="input-group-btn">
+								<button class="btn btn-warning btn-sm" id="btn-chat" type="button">
+									Senden</button>
+							</span>
+                                </div>
+                            </div>
+                            <!-- /.panel-footer -->
+                        </div>
+                        <!-- /.panel .chat-panel -->
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
@@ -269,10 +378,7 @@
                                                     <td>
                                                         Retoure
                                                     </td>
-                                                    <td><button type="button" id="chatButton" class="btn btn-success btn-circle">
-													<i class="fa fa-comments" ></i>
-												</button></td>
-
+                                                    <td class="center"><button type="button" id="mymodal" class="btn btn-success btn-circle" data-toggle="modal" data-target="#myModal"><i class="fa fa-comments"></i></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Auftrag2</td>
@@ -280,9 +386,7 @@
                                                     <td>
                                                         Lieferreklamation
                                                     </td>
-                                                    <td><button type="button" id="chatButton1" class="btn btn-success btn-circle">
-													<i class="fa fa-comments"></i>
-												</button></td>
+                                                    <td class="center"><button type="button" id="mymodal" class="btn btn-success btn-circle" data-toggle="modal" data-target="#myModal"><i class="fa fa-comments"></i></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Auftrag3</td>
@@ -290,9 +394,7 @@
                                                     <td>
                                                         Transportschaden
                                                     </td>
-                                                    <td><button type="button" id="chatButton2" class="btn btn-success btn-circle">
-													<i class="fa fa-comments"></i>
-												</button></td>
+                                                   <td class="center"><button type="button" id="mymodal" class="btn btn-success btn-circle" data-toggle="modal" data-target="#myModal"><i class="fa fa-comments"></i></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Auftrag4</td>
@@ -300,9 +402,7 @@
                                                     <td>
                                                         Retoure
                                                     </td>
-                                                    <td><button type="button" id="chatButton3" class="btn btn-success btn-circle">
-													<i class="fa fa-comments"></i>
-												</button></td>
+                                                    <td class="center"><button type="button" id="mymodal" class="btn btn-success btn-circle" data-toggle="modal" data-target="#myModal"><i class="fa fa-comments"></i></td>
                                                 </tr>
                                             </tbody>
                                         </table>
