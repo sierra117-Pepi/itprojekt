@@ -1,5 +1,5 @@
-$(document).ready(function() {
-    var save = document.getElementById("cmd").addEventListener("click", savePDF);
+$(document).ready(function () {
+    var save = document.getElementById("cmd").addEventListener("click", savePDF());
 
 });
 
