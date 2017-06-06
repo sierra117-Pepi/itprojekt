@@ -1,8 +1,8 @@
 /*
-$(document).ready(function () {
+window.onload = function () {
     var save = document.getElementById("cmd").addEventListener("click", savePDF());
 
-});
+}
 
 function savePDF() {
     var doc = new jsPDF();

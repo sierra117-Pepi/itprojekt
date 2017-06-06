@@ -9,9 +9,9 @@ var worker = {
     password: "testworker"
 };
 
-$(document).ready(function () {
+window.onload = function () {
     addActionListeners();
-});
+}
 
 function addActionListeners() {
     var loginButton = document.getElementById("loginButton").addEventListener("click", function () {
