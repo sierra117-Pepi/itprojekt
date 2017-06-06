@@ -36,7 +36,7 @@
 
     <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
+    <script type="text/javascript" src="../../JavaScript/CustomFiles/messagesUser.js"></script>
 </head>
 
 <body>
@@ -113,7 +113,7 @@
                             <a href="editTask.html">
                                 <div>
                                     <p>
-                                        <strong>Kabelschacht</strong> <span class="pull-right text-muted">40% Abgeschlossen
+                                        <strong>Auftrag1</strong> <span class="pull-right text-muted">40% Abgeschlossen
 											</span>
                                     </p>
                                     <div class="progress progress-striped active">
@@ -129,7 +129,7 @@
                             <a href="#">
                                 <div>
                                     <p>
-                                        <strong>Leisten</strong> <span class="pull-right text-muted">20%
+                                        <strong>Auftrag2</strong> <span class="pull-right text-muted">20%
 											Abgeschlossen</span>
                                     </p>
                                     <div class="progress progress-striped active">
@@ -145,7 +145,7 @@
                             <a href="#">
                                 <div>
                                     <p>
-                                        <strong>Schalter</strong> <span class="pull-right text-muted">60%
+                                        <strong>Auftrag3</strong> <span class="pull-right text-muted">60%
 											Abgeschlossen</span>
                                     </p>
                                     <div class="progress progress-striped active">
@@ -161,7 +161,7 @@
                             <a href="#">
                                 <div>
                                     <p>
-                                        <strong>Sprechanlage</strong> <span class="pull-right text-muted">80%
+                                        <strong>Auftrag4</strong> <span class="pull-right text-muted">80%
 											Abgeschlossen</span>
                                     </p>
                                     <div class="progress progress-striped active">
@@ -179,42 +179,6 @@
                         </li>
                     </ul>
                     <!-- /.dropdown-tasks -->
-                </li>
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i> Neuer Kommentar <span class="pull-right text-muted small">Vor 12 Minuten </span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i> Nachricht gesendet <span class="pull-right text-muted small">Vor 1 Stunde</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-tasks fa-fw"></i> Neuer Auftrag <span class="pull-right text-muted small">Vor 40 Minuten</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#"> <strong>Alle Benachrichtigungen</strong> <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-alerts -->
                 </li>
                 <!-- /.dropdown -->
                 <li class="dropdown">
@@ -267,14 +231,103 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Nachricht von TestWorker</h4>
+                        <h4 class="modal-title" id="myModalLabel">Chatverlauf</h4>
                     </div>
                     <div class="modal-body">
-                        <p>Message goes here</p>
+                        <div class="chat-panel panel panel-default">
+                            <div class="panel-heading">
+                                <i class="fa fa-comments fa-fw"></i> Chat
+                                <div class="btn-group pull-right">
+                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+								<i class="fa fa-chevron-down"></i>
+							</button>
+                                    <ul class="dropdown-menu slidedown">
+                                        <li>
+                                            <a href="#" id="refresh"> <i class="fa fa-refresh fa-fw"></i> Refresh
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <ul class="chat" id="chat-div">
+                                    <li class="left clearfix"><span class="chat-img pull-left">
+									<img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar"
+									class="img-circle"
+								/>
+							</span>
+                                        <div class="chat-body clearfix">
+                                            <div class="header">
+                                                <strong class="primary-font">TestUser</strong> <small class="pull-right text-muted"> <i class="fa fa-clock-o fa-fw"></i> Vor 15 Minuten 
+										</small>
+                                            </div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="right clearfix"><span class="chat-img pull-right">
+									<img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar"
+									class="img-circle"
+								/>
+							</span>
+                                        <div class="chat-body clearfix">
+                                            <div class="header">
+                                                <small class=" text-muted"> <i
+											class="fa fa-clock-o fa-fw"
+										></i> Vor 14 Minuten
+										</small> <strong class="pull-right primary-font">TestWorker</strong>
+                                            </div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="left clearfix"><span class="chat-img pull-left">
+									<img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar"
+									class="img-circle"
+								/>
+							</span>
+                                        <div class="chat-body clearfix">
+                                            <div class="header">
+                                                <strong class="primary-font">TestUser</strong> <small class="pull-right text-muted"> <i class="fa fa-clock-o fa-fw"></i> Vor 13 Minuten
+										</small>
+                                            </div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="right clearfix"><span class="chat-img pull-right">
+									<img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar"
+									class="img-circle"
+								/>
+							</span>
+                                        <div class="chat-body clearfix">
+                                            <div class="header">
+                                                <small class=" text-muted"> <i
+											class="fa fa-clock-o fa-fw"
+										></i> Vor 12 Minuten
+										</small> <strong class="pull-right primary-font">TestWorker</strong>
+                                            </div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.panel-body -->
+                            <div class="panel-footer">
+                                <div class="input-group">
+                                    <input id="btn-input" type="text" class="form-control input-sm" placeholder="Nachricht hier eingeben..." /> <span class="input-group-btn">
+								<button class="btn btn-warning btn-sm" id="btn-chat" type="button">
+									Senden</button>
+							</span>
+                                </div>
+                            </div>
+                            <!-- /.panel-footer -->
+                        </div>
+                        <!-- /.panel .chat-panel -->
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-mail-forward fa-fw"></i> Weiterleiten</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-mail-reply fa-fw"></i> Antowrt verfassen</button>
                     </div>
                 </div>
             </div>
@@ -301,7 +354,7 @@
                                 <thead>
                                     <tr>
                                         <th>Sender</th>
-                                        <th>Zweck</th>
+                                        <th>Auftrag</th>
                                         <th>Datum</th>
                                         <th>Zeit</th>
                                         <th>Lesen</th>
@@ -310,7 +363,7 @@
                                 <tbody>
                                     <tr class="odd gradeX">
                                         <td class="center">TestWorker</td>
-                                        <td class="center">Kabelschacht</td>
+                                        <td class="center">Auftrag1</td>
                                         <td class="center">03.04.2017</td>
                                         <td class="center">14:33:45</td>
                                         <td class="center"><button type="button" id="mymodal" class="btn btn-info btn-circle" data-toggle="modal" data-target="#myModal"><i class="fa fa-link"></i>
@@ -318,14 +371,21 @@
                                     </tr>
                                     <tr class="odd gradeX">
                                         <td class="center">TestWorker</td>
-                                        <td class="center">Kabelschacht</td>
+                                        <td class="center">Auftrag2</td>
                                         <td class="center">03.04.2017</td>
                                         <td class="center">16:33:45</td>
                                         <td class="center"><button type="button" id="mymodal" class="btn btn-info btn-circle" data-toggle="modal" data-target="#myModal"><i class="fa fa-link"></i></td>
                                     </tr>
                                     <tr class="odd gradeX">
                                         <td class="center">TestWorker</td>
-                                        <td class="center">Leisten</td>
+                                        <td class="center">Auftrag3</td>
+                                        <td class="center">13.04.2017</td>
+                                        <td class="center">14:33:45</td>
+                                        <td class="center"><button type="button" id="mymodal" class="btn btn-info btn-circle" data-toggle="modal" data-target="#myModal"><i class="fa fa-link"></i></td>
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td class="center">TestWorker</td>
+                                        <td class="center">Auftrag4</td>
                                         <td class="center">13.04.2017</td>
                                         <td class="center">14:33:45</td>
                                         <td class="center"><button type="button" id="mymodal" class="btn btn-info btn-circle" data-toggle="modal" data-target="#myModal"><i class="fa fa-link"></i></td>
