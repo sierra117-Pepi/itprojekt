@@ -12,10 +12,6 @@ function savePDF() {
 
 }
 
-
-
-
-
 /*
 var doc = new jsPDF();
 var specialElementHandlers = {
