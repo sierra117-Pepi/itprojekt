@@ -1,3 +1,4 @@
+/*
 $(document).ready(function () {
     var save = document.getElementById("cmd").addEventListener("click", savePDF());
 
@@ -12,7 +13,7 @@ function savePDF() {
 
 }
 
-/*
+
 var doc = new jsPDF();
 var specialElementHandlers = {
     '#editor': function(element, renderer) {
