@@ -1,6 +1,6 @@
-window.onload = function () {
+$(document).ready(function () {
     addActionListeners();
-}
+});
 
 function addActionListeners() {
     var editButton1 = document.getElementById("editButton1").addEventListener("click", function () {

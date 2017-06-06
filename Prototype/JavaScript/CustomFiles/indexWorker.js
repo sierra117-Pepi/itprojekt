@@ -1,12 +1,12 @@
 /**
  * 
  */
-window.onload = function() {
+$(document).ready(function () {
     var claimButton = document.getElementById("claimButton").addEventListener("click", getTask);
     var claimButton = document.getElementById("claimButton1").addEventListener("click", getTask1);
     var claimButton = document.getElementById("claimButton2").addEventListener("click", getTask2);
     var claimButton = document.getElementById("claimButton3").addEventListener("click", getTask3);
-}
+});
 
 function getTask() {
     document.getElementById("claimWorker").innerHTML = "Mitarbeiter1";

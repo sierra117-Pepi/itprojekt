@@ -1,6 +1,6 @@
-window.onload = function () {
+$(document).ready(function () {
     addActionListeners();
-}
+});
 
 function addActionListeners() {
     //Define action for btn-chat
