@@ -46,3 +46,21 @@ function addMessage(chat, message) {
     chat.appendChild(li);
     //End append child elements
 }
+
+function changeColour(btn) {
+    switch (btn) {
+        case 'btn1':
+            document.getElementById("btn1").setAttribute("class", "btn btn-success btn-circle");
+            break;
+        case 'btn2':
+            document.getElementById("btn2").setAttribute("class", "btn btn-success btn-circle");
+            break;
+        case 'btn3':
+            document.getElementById("btn3").setAttribute("class", "btn btn-success btn-circle");
+            break;
+        case 'btn4':
+            document.getElementById("btn4").setAttribute("class", "btn btn-success btn-circle");
+            break;
+
+    }
+}

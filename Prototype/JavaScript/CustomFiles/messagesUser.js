@@ -1,4 +1,11 @@
 window.onload = function () {
+    var art = localStorage.getItem("art");
+    var auftrag = localStorage.getItem("auftrag");
+    if (auftrag != undefined || auftrag != null) {
+        changeAuftragType(auftrag, art);
+        localStorage.removeItem("art");
+        localStorage.removeItem("auftrag");
+    }
     addActionListeners();
 }
 
@@ -49,4 +56,39 @@ function addMessage(chat, message) {
     li.appendChild(divBody);
     chat.appendChild(li);
     //End append child elements
+}
+
+function changeAuftragType(auftrag, art) {
+    switch (auftrag) {
+        case 'Auftrag1':
+            document.getElementById("Art1").innerHTML = art;
+            break;
+        case 'Auftrag2':
+            document.getElementById("Art2").innerHTML = art;
+            break;
+        case 'Auftrag3':
+            document.getElementById("Art3").innerHTML = art;
+            break;
+        case 'Auftrag4':
+            document.getElementById("Art4").innerHTML = art;
+            break;
+    }
+}
+
+function changeColour(btn) {
+    switch (btn) {
+        case 'btn1':
+            document.getElementById("btn1").setAttribute("class", "btn btn-success btn-circle");
+            break;
+        case 'btn2':
+            document.getElementById("btn2").setAttribute("class", "btn btn-success btn-circle");
+            break;
+        case 'btn3':
+            document.getElementById("btn3").setAttribute("class", "btn btn-success btn-circle");
+            break;
+        case 'btn4':
+            document.getElementById("btn4").setAttribute("class", "btn btn-success btn-circle");
+            break;
+
+    }
 }
