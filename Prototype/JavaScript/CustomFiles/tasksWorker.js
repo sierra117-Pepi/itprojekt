@@ -64,3 +64,24 @@ function changeColour(btn) {
 
     }
 }
+
+//Define PDF action
+var pdf = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    document.getElementById('pdf').onclick = function () {
+
+        var options = {
+            background: "#FFFFFF"
+        };
+        //pdf.addHTML (element, x, y, options, callback );
+        pdf.addHTML(document.getElementById('content'), 15, 15, options, function () {
+            pdf.save('chatVerlauf.pdf');
+        });
+    };
+});
