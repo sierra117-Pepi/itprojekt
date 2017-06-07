@@ -180,11 +180,6 @@
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User
-								Profile</a></li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
                         <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>
 								Logout</a></li>
                     </ul>
@@ -286,6 +281,7 @@
                                             <th>Datum</th>
                                             <th>Beschreibung</th>
                                             <th>Bearbeitet von</th>
+                                            <th>Mitarbeiter zuweisen</th>
                                             <th>Mitarbeiterzuweisung löschen</th>
                                         </tr>
                                     </thead>
@@ -298,11 +294,20 @@
 												<i class="fa fa-list"></i>
 												</button>
                                             </td>
-                                            <td id="worker">Hansi</td>
-                                            <td><button type="button" class="btn btn-success btn-circle" id="remWorkerButton">
+                                            <td id="worker">Mitarbeiter1</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button type="button" data-toggle="dropdown" class="btn btn-success btn-circle dropdown-toggle">
 													<i class="fa fa-link"></i>
+												</button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a id="addWorker" href="#">MitarbeiterTest</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td><button type="button" class="btn btn-danger btn-circle" id="remWorkerButton">
+													<i class="fa fa-times"></i>
 												</button></td>
-
                                         </tr>
                                         <tr>
                                             <td>Auftrag2</td>
@@ -312,9 +317,19 @@
 												<i class="fa fa-list"></i>
 												</button>
                                             </td>
-                                            <td id="worker1">Maxi</td>
-                                            <td><button type="button" class="btn btn-success btn-circle" id="remWorkerButton1">
+                                            <td id="worker1">Mitarbeiter1</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button type="button" data-toggle="dropdown" class="btn btn-success btn-circle dropdown-toggle">
 													<i class="fa fa-link"></i>
+												</button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a id="addWorker1" href="#">MitarbeiterTest</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td><button type="button" class="btn btn-danger btn-circle" id="remWorkerButton1">
+													<i class="fa fa-times"></i>
 												</button></td>
                                         </tr>
                                         <tr>
@@ -325,9 +340,19 @@
 												<i class="fa fa-list"></i>
 												</button>
                                             </td>
-                                            <td id="worker2">Hugo</td>
-                                            <td><button type="button" class="btn btn-success btn-circle" id="remWorkerButton2">
+                                            <td id="worker2">Mitarbeiter1</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button type="button" data-toggle="dropdown" class="btn btn-success btn-circle dropdown-toggle">
 													<i class="fa fa-link"></i>
+												</button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a id="addWorker2" href="#">MitarbeiterTest</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td><button type="button" class="btn btn-danger btn-circle" id="remWorkerButton2">
+													<i class="fa fa-times"></i>
 												</button></td>
                                         </tr>
                                         <tr>
@@ -338,11 +363,20 @@
 												<i class="fa fa-list"></i>
 												</button>
                                             </td>
-                                            <td id="worker3">Toni</td>
-                                            <td><button type="button" class="btn btn-success btn-circle" id="remWorkerButton3">
+                                            <td id="worker3">Mitarbeiter1</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button type="button" data-toggle="dropdown" class="btn btn-success btn-circle dropdown-toggle">
 													<i class="fa fa-link"></i>
+												</button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a id="addWorker3" href="#">MitarbeiterTest</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td><button type="button" class="btn btn-danger btn-circle" id="remWorkerButton3">
+													<i class="fa fa-times"></i>
 												</button></td>
-
                                         </tr>
                                     </tbody>
                                 </table>
@@ -379,6 +413,7 @@
             // popover demo
             $("[data-toggle=popover]")
                 .popover()
+
         </script>
 </body>
 

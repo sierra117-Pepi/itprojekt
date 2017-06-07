@@ -1,51 +1,47 @@
 /**
  * 
  */
- 
-/* Listener auf Button click -> ruft danach eine getTask Methode auf welche den Mitarbeiter entferndt*/
-/*
-window.onload = function() {
-    var claimButton = document.getElementById("remWorkerButton").addEventListener("click", getTask("worker"));
-    var claimButton = document.getElementById("remWorkerButton1").addEventListener("click", getTask("worker1"));
-    var claimButton = document.getElementById("remWorkerButton2").addEventListener("click", getTask("worker2"));
-    var claimButton = document.getElementById("remWorkerButton3").addEventListener("click", getTask("worker3"));
+window.onload = function () {
+
+    document.getElementById("remWorkerButton").addEventListener("click", remWorker);
+    document.getElementById("remWorkerButton1").addEventListener("click", remWorker1);
+    document.getElementById("remWorkerButton2").addEventListener("click", remWorker2);
+    document.getElementById("remWorkerButton3").addEventListener("click", remWorker3);
+
+    document.getElementById("addWorker").addEventListener("click", addWorker);
+    document.getElementById("addWorker1").addEventListener("click", addWorker1);
+    document.getElementById("addWorker2").addEventListener("click", addWorker2);
+    document.getElementById("addWorker3").addEventListener("click", addWorker3);
 }
 
-function getTask(elementID) {
-    document.getElementById(elementID).innerHTML = "kein Mitarbeiter zugew.";
+function remWorker() {
+    document.getElementById("worker").innerHTML = "";
 }
 
-function getTask1() {
-    document.getElementById("remWorker1").innerHTML = "kein Mitarbeiter zugew.";
+function remWorker1() {
+    document.getElementById("worker1").innerHTML = "";
 }
 
-function getTask2() {
-    document.getElementById("remWorker2").innerHTML = "kein Mitarbeiter zugew.";
+function remWorker2() {
+    document.getElementById("worker2").innerHTML = "";
 }
 
-function getTask3() {
-    document.getElementById("remWorker3").innerHTML = "kein Mitarbeiter zugew.";
-}
-*/
-window.onload = function() {
-    var claimButton = document.getElementById("remWorkerButton").addEventListener("click", getTask);
-    var claimButton = document.getElementById("remWorkerButton1").addEventListener("click", getTask1);
-    var claimButton = document.getElementById("remWorkerButton2").addEventListener("click", getTask2);
-    var claimButton = document.getElementById("remWorkerButton3").addEventListener("click", getTask3);
+function remWorker3() {
+    document.getElementById("worker3").innerHTML = "";
 }
 
-function getTask() {
-    document.getElementById("worker").innerHTML = "kein Mitarbeiter zugew.";
+function addWorker() {
+    document.getElementById("worker").innerHTML = "MitarbeiterTest";
 }
 
-function getTask1() {
-    document.getElementById("worker1").innerHTML = "kein Mitarbeiter zugew.";
+function addWorker1() {
+    document.getElementById("worker1").innerHTML = "MitarbeiterTest";
 }
 
-function getTask2() {
-    document.getElementById("worker2").innerHTML = "kein Mitarbeiter zugew.";
+function addWorker2() {
+    document.getElementById("worker2").innerHTML = "MitarbeiterTest";
 }
 
-function getTask3() {
-    document.getElementById("worker3").innerHTML = "kein Mitarbeiter zugew.";
+function addWorker3() {
+    document.getElementById("worker3").innerHTML = "MitarbeiterTest";
 }
