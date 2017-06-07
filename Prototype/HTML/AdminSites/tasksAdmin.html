@@ -33,7 +33,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
     <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../JavaScript/CustomFiles/tasksAdmin.js"></script>
@@ -245,12 +246,14 @@
                                         <li>
                                             <a href="#" id="refresh"> <i class="fa fa-refresh fa-fw"></i> Refresh
                                             </a>
+											 <a href="#" id="cmd"> <i class="fa fa-refresh fa-fw"></i> Generate PDF
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <!-- /.panel-heading -->
-                            <div class="panel-body">
+                            <div id="content" class="panel-body">
                                 <ul class="chat" id="chat-div">
                                     <li class="left clearfix"><span class="chat-img pull-left">
 									<img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar"
@@ -314,6 +317,8 @@
                                     </li>
                                 </ul>
                             </div>
+							
+<div id="editor"></div>
                             <!-- /.panel-body -->
                             <div class="panel-footer">
                                 <div class="input-group">
@@ -324,6 +329,7 @@
                                 </div>
                             </div>
                             <!-- /.panel-footer -->
+							
                         </div>
                         <!-- /.panel .chat-panel -->
                     </div>
