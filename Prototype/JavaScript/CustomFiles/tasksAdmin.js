@@ -47,43 +47,21 @@ function addMessage(chat, message) {
     //End append child elements
 }
 
-var doc = new jsPDF();
+var pdf = new jsPDF();
 var specialElementHandlers = {
     '#editor': function (element, renderer) {
         return true;
     }
 };
-/*
-$(document).ready(function () {
-	$('#cmd').click(function () {
-		doc.fromHTML($('#content').html(), 15, 15, {
-			'width': 170,
-				'elementHandlers': specialElementHandlers
-		});
-		doc.save('sample-file.pdf');
-	});
-});
-*/
 
 document.addEventListener("DOMContentLoaded", function(event) { 
 	document.getElementById('cmd').onclick = function () {
 		
-		//canvas for white background otherwise black
-		var canvas = document.createElement('canvas');
-		var ctx = canvas.getContext('2d');
-		ctx.clearRect( 0 , 0 , canvas.width, canvas.height );
-		ctx.fillStyle="#FFFFFF";
-		ctx.fillRect(0 , 0 , canvas.width, canvas.height);
-		
-		doc.addHTML(document.getElementById('content'),function() {
-			doc.save('pdfTable.pdf');
+		var options = {background:"#FFFFFF"};
+		//pdf.addHTML (element, x, y, options, callback );
+		pdf.addHTML(document.getElementById('content'), 15, 15, options, function() {
+			pdf.save('chatVerlauf.pdf');
 		});
-		/*doc.fromHTML(document.getElementById('content').innerHTML, 15, 15, {
-			'width': 170,
-			'elementHandlers': specialElementHandlers
-		});
-		doc.save('sample-file.pdf');
-		*/
 	};
 });
 
