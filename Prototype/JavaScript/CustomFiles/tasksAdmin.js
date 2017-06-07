@@ -46,3 +46,32 @@ function addMessage(chat, message) {
     chat.appendChild(li);
     //End append child elements
 }
+
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+/*
+$(document).ready(function () {
+	$('#cmd').click(function () {
+		doc.fromHTML($('#content').html(), 15, 15, {
+			'width': 170,
+				'elementHandlers': specialElementHandlers
+		});
+		doc.save('sample-file.pdf');
+	});
+});
+*/
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+	document.getElementById('cmd').onclick = function () {
+		doc.fromHTML(document.getElementById('content').innerHTML, 15, 15, {
+			'width': 170,
+				'elementHandlers': specialElementHandlers
+		});
+		doc.save('sample-file.pdf');
+	};
+});
+
