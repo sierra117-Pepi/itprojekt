@@ -3,7 +3,7 @@ window.onload = function () {
 }
 
 function addActionListeners() {
-    var editButton1 = document.getElementById("editButton1").addEventListener("click", function () {
+    var editButton = document.getElementById("editButton").addEventListener("click", function () {
         localStorage.setItem("auftrag", "Auftrag1");
         openWindowEditTask();
     });

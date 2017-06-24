@@ -209,8 +209,8 @@
                         </li>
                         <li><a href="indexUser.html"><i class="fa fa-dashboard fa-fw"></i>
 								Dashboard</a></li>
-                        <li><a href="tasksUser.html"><i class="fa fa-tasks fa-fw"></i>
-								Meine Aufträge</a></li>
+                        <li><a href="tasksUser.html"><i class="fa fa-plus fa-fw"></i>
+								Neue Reklamation</a></li>
                         <li><a href="messagesUser.html"><i class="fa fa-envelope fa-fw"></i>
 								Meine Reklamationen</a></li>
                     </ul>
@@ -350,7 +350,7 @@
                                     <tr>
                                         <th>Auftrag</th>
                                         <th>Beschreibung</th>
-                                        <th>Bearbeitet von</th>
+                                        <th>Auftragsstatus</th>
                                         <th>Datum</th>
                                         <th>Zeit</th>
                                         <th>Lesen</th>
@@ -360,8 +360,14 @@
                                     <tr class="odd gradeX">
                                         <td id="Auftrag1" class="center">Auftrag1</td>
                                         <td id="Art1" class="center">Retoure</td>
-                                        <td class="center">TestWorker</td>
-                                        <td class="center">03.04.2017</td>
+										<td>
+											<div class="progress progress-striped active">
+                                                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                      <span class="sr-only">20% Abgeschlossen (success)</span>
+                                                 </div>
+                                            </div>
+                                        </td>                                        
+										<td class="center">03.04.2017</td>
                                         <td class="center">14:33:45</td>
                                         <td class="center"><button type="button" id="btn1" class="btn btn-danger btn-circle" data-toggle="modal" data-target="#myModal" onclick="changeColour('btn1')"><i class="fa fa-comments"></i>
                             </button></td>
@@ -369,24 +375,42 @@
                                     <tr class="odd gradeX">
                                         <td id="Auftrag2" class="center">Auftrag2</td>
                                         <td id="Art2" class="center">Lieferreklamation</td>
-                                        <td class="center">TestWorker</td>
-                                        <td class="center">03.04.2017</td>
+										<td>
+											<div class="progress progress-striped active">
+                                                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                      <span class="sr-only">40% Abgeschlossen (success)</span>
+                                                 </div>
+                                            </div>
+                                        </td>
+                                       <td class="center">03.04.2017</td>
                                         <td class="center">16:33:45</td>
                                         <td class="center"><button type="button" id="btn2" class="btn btn-success btn-circle" data-toggle="modal" data-target="#myModal" onclick="changeColour('btn2')"><i class="fa fa-comments"></i></td>
                                     </tr>
                                     <tr class="odd gradeX">
                                         <td id="Auftrag3" class="center">Auftrag3</td>
                                         <td id="Art3" class="center">Garantievorabtausch</td>
-                                        <td class="center">TestWorker</td>
-                                        <td class="center">13.04.2017</td>
+										<td>
+											<div class="progress progress-striped active">
+                                                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                                      <span class="sr-only">50% Abgeschlossen (success)</span>
+                                                 </div>
+                                            </div>
+                                        </td>
+										<td class="center">13.04.2017</td>
                                         <td class="center">14:33:45</td>
                                        <td class="center"><button type="button" id="btn3" class="btn btn-success btn-circle" data-toggle="modal" data-target="#myModal" onclick="changeColour('btn3')"><i class="fa fa-comments"></i></td>
                                     </tr>
                                     <tr class="odd gradeX">
                                         <td id="Auftrag4" class="center">Auftrag4</td>
                                         <td id="Art4" class="center">Retoure</td>
-                                        <td class="center">TestWorker</td>
-                                        <td class="center">13.04.2017</td>
+										<td>
+											<div class="progress progress-striped active">
+                                                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                      <span class="sr-only">20% Abgeschlossen (success)</span>
+                                                 </div>
+                                            </div>
+                                        </td>
+                                       <td class="center">13.04.2017</td>
                                         <td class="center">14:33:45</td>
                                        <td class="center"><button type="button" id="btn4" class="btn btn-success btn-circle" data-toggle="modal" data-target="#myModal" onclick="changeColour('btn4')"><i class="fa fa-comments"></i></td>
                                     </tr>
