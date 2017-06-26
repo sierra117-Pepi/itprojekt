@@ -92,3 +92,120 @@ function changeColour(btn) {
 
     }
 }
+
+
+
+
+
+function savePDF() {
+    // parse the HTML table element having an id=exportTable
+    var dataSource = shield.DataSource.create({
+        data: "#dataTables-example",
+        schema: {
+            type: "table",
+            fields: {
+                Auftrag: {
+                    type: String
+                },
+                Beschreibung: {
+                    type: String
+                },
+                Auftragsstatus: {
+                    type: String
+                },
+                Datum: {
+                    type: String
+                },
+				Zeit: {
+                    type: String
+                }
+            }
+        }
+    });
+
+    // when parsing is done, export the data to PDF
+    dataSource.read().then(function (data) {
+        var pdf = new shield.exp.PDFDocument({
+            author: "PrepBootstrap",
+            created: new Date()
+        });
+
+        pdf.addPage("a4", "portrait");
+
+        pdf.table(
+            50,
+            50,
+            data, [
+                {
+                    field: "Auftrag",
+                    title: "Auftrag Name",
+                    width: 100
+                    },
+                {
+                    field: "Beschreibung",
+                    title: "Beschreibung Name",
+                    width: 100
+                    },
+                {
+                    field: "Auftragsstatus",
+                    title: "Auftragsstatus",
+                    width: 100
+                    },
+                {
+                    field: "Datum",
+                    title: "Datum",
+                    width: 100
+                    }, 
+				{
+					field: "Zeit",
+                    title: "Zeit",
+                    width: 100
+                    }
+                    ], {
+                margins: {
+                    top: 50,
+                    left: 50
+                }
+            }
+        );
+
+        pdf.saveAs({
+            fileName: "Reklamation.pdf"
+        });
+    });
+}
+
+
+//Define PDF action
+var pdf = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    document.getElementById('pdf1').onclick = function () {
+
+        var options = {
+            background: "#FFFFFF"
+        };
+        //pdf.addHTML (element, x, y, options, callback );
+        pdf.addHTML(document.getElementById('column1'), 15, 15, options, function () {
+            pdf.save('Reklamation.pdf');
+        });
+    };
+});
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    document.getElementById('pdf2').onclick = function () {
+
+        var options = {
+            background: "#FFFFFF"
+        };
+        //pdf.addHTML (element, x, y, options, callback );
+        pdf.addHTML(document.getElementById('column2'), 15, 15, options, function () {
+            pdf.save('Reklamation.pdf');
+        });
+    };
+});
