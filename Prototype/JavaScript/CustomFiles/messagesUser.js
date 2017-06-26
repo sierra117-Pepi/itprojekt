@@ -107,7 +107,7 @@ function savePDF() {
                 Beschreibung: {
                     type: String
                 },
-                Auftragsstatus: {
+                Status: {
                     type: String
                 },
                 Datum: {
@@ -154,8 +154,8 @@ function savePDF() {
                     width: 100
                     },
                 {
-                    field: "Auftragsstatus",
-                    title: "Auftragsstatus",
+                    field: "Status",
+                    title: "Status",
                     width: 100,
                     }
                     ], {
