@@ -16,6 +16,7 @@ function addActionListeners() {
         var chat = document.getElementById("chat-div");
         addMessage(chat, message);
     });
+    $("#pdf").click(savePDF);
 }
 
 function addMessage(chat, message) {
@@ -93,10 +94,6 @@ function changeColour(btn) {
     }
 }
 
-
-
-
-
 function savePDF() {
     // parse the HTML table element having an id=exportTable
     var dataSource = shield.DataSource.create({
@@ -116,7 +113,7 @@ function savePDF() {
                 Datum: {
                     type: String
                 },
-				Zeit: {
+                Zeit: {
                     type: String
                 }
             }
@@ -147,19 +144,19 @@ function savePDF() {
                     width: 100
                     },
                 {
-                    field: "Auftragsstatus",
-                    title: "Auftragsstatus",
-                    width: 100
-                    },
-                {
                     field: "Datum",
                     title: "Datum",
                     width: 100
-                    }, 
-				{
-					field: "Zeit",
+                    },
+                {
+                    field: "Zeit",
                     title: "Zeit",
                     width: 100
+                    },
+                {
+                    field: "Auftragsstatus",
+                    title: "Auftragsstatus",
+                    width: 100,
                     }
                     ], {
                 margins: {
@@ -174,7 +171,6 @@ function savePDF() {
         });
     });
 }
-
 
 //Define PDF action
 var pdf = new jsPDF();
@@ -205,6 +201,32 @@ document.addEventListener("DOMContentLoaded", function (event) {
         };
         //pdf.addHTML (element, x, y, options, callback );
         pdf.addHTML(document.getElementById('column2'), 15, 15, options, function () {
+            pdf.save('Reklamation.pdf');
+        });
+    };
+});
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    document.getElementById('pdf3').onclick = function () {
+
+        var options = {
+            background: "#FFFFFF"
+        };
+        //pdf.addHTML (element, x, y, options, callback );
+        pdf.addHTML(document.getElementById('column3'), 15, 15, options, function () {
+            pdf.save('Reklamation.pdf');
+        });
+    };
+});
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    document.getElementById('pdf4').onclick = function () {
+
+        var options = {
+            background: "#FFFFFF"
+        };
+        //pdf.addHTML (element, x, y, options, callback );
+        pdf.addHTML(document.getElementById('column4'), 15, 15, options, function () {
             pdf.save('Reklamation.pdf');
         });
     };

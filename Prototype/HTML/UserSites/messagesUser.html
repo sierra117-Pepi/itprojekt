@@ -33,13 +33,13 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
-   
-   <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../JavaScript/CustomFiles/messagesUser.js"></script>
-	<script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
     <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/jszip.min.js"></script>
 </head>
 
@@ -244,7 +244,7 @@
                                         <li>
                                             <a href="#" id="refresh"> <i class="fa fa-refresh fa-fw"></i>Aktualisieren
                                             </a>
-                                           
+
                                         </li>
                                     </ul>
                                 </div>
@@ -346,13 +346,13 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                         <a href="#" id="pdf"> <i class="fa fa-refresh fa-fw"></i>PDF erstellen
-                         </a>
+                            <a href="#" id="pdf"> <i class="fa fa-refresh fa-fw"></i>PDF erstellen
+                            </a>
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                <thead id ="head">
+                                <thead id="head">
                                     <tr>
                                         <th>Auftrag</th>
                                         <th>Beschreibung</th>
@@ -360,38 +360,40 @@
                                         <th>Datum</th>
                                         <th>Zeit</th>
                                         <th>Lesen</th>
-										<th></th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="odd gradeX" id="column1">
                                         <td id="Auftrag1" class="center">Auftrag1</td>
                                         <td id="Art1" class="center">Retoure</td>
-										<td>
-											<div class="progress progress-striped active">
-                                                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                                      <span class="sr-only">20% Abgeschlossen (success)</span>
-                                                 </div>
+                                        <td>
+                                            <div class="progress progress-striped active">
+                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                    <span class="sr-only">20% Abgeschlossen (success)</span>
+                                                </div>
                                             </div>
-                                        </td>                                        
-										<td class="center">03.04.2017</td>
+                                        </td>
+                                        <td class="center">03.04.2017</td>
                                         <td class="center">14:33:45</td>
                                         <td class="center"><button type="button" id="btn1" class="btn btn-danger btn-circle" data-toggle="modal" data-target="#myModal" onclick="changeColour('btn1')"><i class="fa fa-comments"></i>
                             </button></td>
-							<td> <a href="#" id="pdf1"> <i class="fa fa-refresh fa-fw"></i>PDF erstellen
-                                            </a></td>
+                                        <td>
+                                            <a href="#" id="pdf1"> <i class="fa fa-refresh fa-fw"></i>PDF erstellen
+                                            </a>
+                                        </td>
                                     </tr>
-                                    <tr class="odd gradeX" id = "column2">
+                                    <tr class="odd gradeX" id="column2">
                                         <td id="Auftrag2" class="center">Auftrag2</td>
                                         <td id="Art2" class="center">Lieferreklamation</td>
-										<td>
-											<div class="progress progress-striped active">
-                                                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                                      <span class="sr-only">40% Abgeschlossen (success)</span>
-                                                 </div>
+                                        <td>
+                                            <div class="progress progress-striped active">
+                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                    <span class="sr-only">40% Abgeschlossen (success)</span>
+                                                </div>
                                             </div>
                                         </td>
-                                       <td class="center">03.04.2017</td>
+                                        <td class="center">03.04.2017</td>
                                         <td class="center">16:33:45</td>
                                         <td class="center"><button type="button" id="btn2" class="btn btn-success btn-circle" data-toggle="modal" data-target="#myModal" onclick="changeColour('btn2')"><i class="fa fa-comments"></i></td>
 										<td> <a href="#" id="pdf2"> <i class="fa fa-refresh fa-fw"></i>PDF erstellen
