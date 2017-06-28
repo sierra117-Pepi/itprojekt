@@ -101,7 +101,7 @@ function savePDF() {
         schema: {
             type: "table",
             fields: {
-                Auftrag: {
+                Reklamationsnummer: {
                     type: String
                 },
                 Beschreibung: {
@@ -134,8 +134,8 @@ function savePDF() {
             50,
             data, [
                 {
-                    field: "Auftrag",
-                    title: "Auftrag Name",
+                    field: "Reklamationsnummer",
+                    title: "Reklamationsnummer",
                     width: 100
                     },
                 {
